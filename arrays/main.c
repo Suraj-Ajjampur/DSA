@@ -125,6 +125,7 @@ struct Array* Merge(struct Array *arr1, struct Array *arr2){
 
     return ArrayMerged;
 }
+
 /**
  * @brief Copy elements from both arrays without copying the duplicates
  * more than once

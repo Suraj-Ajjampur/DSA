@@ -8,16 +8,16 @@
       "program": "enter program name, for example ${workspaceFolder}/a.out",
       "MIMode": "gdb",
       "setupCommands": [
-          {
-              "description": "Enable pretty-printing for gdb",
-              "text": "-enable-pretty-printing",
-              "ignoreFailures": true
-          },
-          {
-              "description": "Set Disassembly Flavor to Intel",
-              "text": "-gdb-set disassembly-flavor intel",
-              "ignoreFailures": true
-          }
+        {
+          "description": "Enable pretty-printing for gdb",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        },
+        {
+          "description": "Set Disassembly Flavor to Intel",
+          "text": "-gdb-set disassembly-flavor intel",
+          "ignoreFailures": true
+        }
       ]
     },
     {
@@ -27,8 +27,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": false,
-      "cwd": "/home/suraj/DSA/arrays",
-      "program": "/home/suraj/DSA/arrays/build/Debug/outDebug",
+      "cwd": "/home/suraj/DSA/Queue",
+      "program": "/home/suraj/DSA/Queue/a.out",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [

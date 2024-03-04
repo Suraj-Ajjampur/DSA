@@ -125,13 +125,78 @@ struct Array* Merge(struct Array *arr1, struct Array *arr2){
 
     return ArrayMerged;
 }
+/**
+ * @brief Copy elements from both arrays without copying the duplicates
+ * more than once
+*/
+struct Array* Union(struct Array *arr1, struct Array *arr2){
+    int i=0,j=0,k=0;
+    struct Array *ArrayMerged;
+    ArrayMerged = (struct Array *)malloc(sizeof(struct Array));
+    //compare and copy
+    while(i < arr1->Length && j< arr2->Length){
+        if(arr1->A[i]<arr2->A[j])
+            ArrayMerged->A[k++] = arr1->A[i++];
+
+        else if(arr2->A[j] < arr1->A[i])
+            ArrayMerged->A[k++] = arr2->A[j++];
+
+        else{
+            ArrayMerged->A[k++] = arr1->A[i++];
+            j++;
+        }
+            
+    }
+    //Copy the remaining elements from array 1 or 2
+    for(;i<arr1->Length;i++)
+        ArrayMerged->A[k++] = arr1->A[i]; 
+    for(;j<arr2->Length;j++)
+        ArrayMerged->A[k++] = arr2->A[j]; 
+    
+    ArrayMerged->Length = k;
+    ArrayMerged->Size = 16;
+
+    return ArrayMerged;
+}
+
+/**
+ * @brief Copy elements from both arrays without copying the duplicates
+ * more than once
+*/
+struct Array* Intersection(struct Array *arr1, struct Array *arr2){
+    int i=0,j=0,k=0;
+    struct Array *ArrayMerged;
+    ArrayMerged = (struct Array *)malloc(sizeof(struct Array));
+    //compare and copy
+    while(i < arr1->Length && j< arr2->Length){
+        if(arr1->A[i]<arr2->A[j])
+            i++;
+
+        else if(arr2->A[j] < arr1->A[i])
+            j++;
+
+        else if(arr1->A[i]==arr2->A[j])
+        {
+            ArrayMerged->A[k++] = arr1->A[i++];
+            j++; //Increment both 
+        }
+    }    
+    ArrayMerged->Length = k;
+    ArrayMerged->Size = 16;
+
+    return ArrayMerged;
+}
+
 
 int main()
 {
     struct Array arr1={{1,2,3,4,5,6,7,8},10,8};
     struct Array arr2={{3,4,5,6,7,8,9,10},10,8};
     struct Array *arr3;
-    arr3=Merge(&arr1,&arr2);
+    printf("Output of merged array after set operation is \n");
+    //arr3=Merge(&arr1,&arr2);
+    //arr3=Union(&arr1,&arr2);
+    arr3=Intersection(&arr1,&arr2);
     Display(*arr3);
     Rearrange(&arr1);
 

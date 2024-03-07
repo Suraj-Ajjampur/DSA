@@ -4,22 +4,25 @@
 
 // Creates a linked list based on the array A[] passed as a parameter
 void create(int A[], int n){
-    struct Node *t,*last;
-
+    struct Node *t,*last; //one node to add elements, other to traverse
+    
+    if (A == NULL)
+        return;
+    
     //Malloc a node
     first=(struct Node *)malloc(sizeof(struct Node));
 
-    first->data=A[0];
-    first->next=NULL;
+    first->data=A[0]; //assign val of first element
+    first->next=NULL; 
     last=first;
 
     for(int i = 1; i<n ;i++)
-    {
+    {   
         t=(struct Node*)malloc(sizeof(struct Node));
         t->data=A[i];
         t->next=NULL;
-        last->next=t;
-        last=t;
+        last->next=t; //link to the linked list
+        last=t;       //Update last
     }
 }
 
@@ -73,7 +76,9 @@ int Sum(struct Node *p){
     return sum;
 }
 
-
+/**
+ * @brief find the node with the max element in the ll
+*/
 int Max(struct Node *p){
     int max = 0;
 
@@ -86,6 +91,9 @@ int Max(struct Node *p){
     return max;
 }
 
+/**
+ * @brief displays the linked list
+*/
 void Display(struct Node *p){
     
     //Traversing a linked List
@@ -94,7 +102,9 @@ void Display(struct Node *p){
         p = p->next;
     }
 }
-
+/**
+ * @brief 
+*/
 struct Node* SearchTransposition(struct Node *p, int key){
     struct Node *q = NULL;
 
@@ -112,6 +122,9 @@ struct Node* SearchTransposition(struct Node *p, int key){
     }
 }
 
+/**
+ * @brief searches for the key in every node of the linked list returns index
+*/
 int Search(struct Node *p, int key){
 
     int index = 0;
@@ -218,6 +231,8 @@ int Delete(struct Node *p, int index)
         return x;
     }
 }
+
+
 int main(void){
 
     struct Node *t1, *t2;

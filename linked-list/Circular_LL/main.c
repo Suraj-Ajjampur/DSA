@@ -1,11 +1,15 @@
 #include <stdio.h>
 #include <malloc.h>
 
+// structure node
 struct Node{
-    int data;
+    int data;           
     struct Node *next;
 }*Head;
 
+/**
+ * @brief 
+**/
 void create(int A[],int n){
     int i; struct Node *t, *last; 
     Head = (struct Node*)malloc(sizeof(struct Node));
@@ -22,6 +26,9 @@ void create(int A[],int n){
     }
 }
 
+/**
+ * @brief traverses the linked list
+**/
 int Length(struct Node *p){
     int len = 0;
     do //do while loop as p = Head at first
@@ -58,6 +65,7 @@ void Insert(struct Node *p, int pos, int x){
         p->next =t; //
     }    
 }
+
 /**
  * @brief Deleting node from Circular Linked List
 */

@@ -259,8 +259,6 @@ int main(void){
     // t1=first->next->next;
     // t2=first->next;
     // t1->next = t2;
-
-
     //Insert(first,2,10);
     InsertinSortedPosition(first,6);
     Delete(first,8);

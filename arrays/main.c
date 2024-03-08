@@ -2,37 +2,7 @@
 #include <math.h>
 #include <stdbool.h>
 #include <malloc.h>
-
-struct Array{
-    int A[10];
-    int Size;
-    int Length;
-};
-
-void Display(struct Array arr){
-
-    for(int i = 0;i < arr.Length; i++){
-        printf("%d ",arr.A[i]);
-    }
-    printf("\n");
-}
-
-void swap(int *x, int *y){
-    *x ^= *y;
-    *y = *y ^ *x;
-    *x ^= *y;
-}
-
-int LinearSearch(struct Array *arr, int key){
-    int i;
-    for(i=0;i<arr->Length;i++){
-        if(key == arr->Length){
-            swap(&arr->A[i],&arr->A[0]);
-            return i;
-        }
-    }
-    return -1; //Key not found
-}
+#include "array_operations.h"
 
 int Binary_Seach(struct Array arr, int key){
     int l =0, h = arr.Length -1, mid;
@@ -102,6 +72,9 @@ void Rearrange(struct Array *arr){
     }
 }
 
+/**
+ * @brief  
+**/
 struct Array* Merge(struct Array *arr1, struct Array *arr2){
     int i=0,j=0,k=0;
     struct Array *ArrayMerged;
@@ -189,22 +162,36 @@ struct Array* Intersection(struct Array *arr1, struct Array *arr2){
 }
 
 
+
 int main()
 {
     struct Array arr1={{1,2,3,4,5,6,7,8},10,8};
     struct Array arr2={{3,4,5,6,7,8,9,10},10,8};
-    struct Array *arr3;
-    printf("Output of merged array after set operation is \n");
-    //arr3=Merge(&arr1,&arr2);
-    //arr3=Union(&arr1,&arr2);
-    arr3=Intersection(&arr1,&arr2);
-    Display(*arr3);
-    Rearrange(&arr1);
-
-    printf("%d\n",Binary_Seach(arr1,7));
-    printf("Is Sorted or not %d\n",isSorted(arr1));
-    Reverse1(&arr1);
+    Insert_element(&arr1,1,23);
     Display(arr1);
+    Delete_element(&arr1,5);
+    Display(arr1);
+
+    int index = BinarySearch(&arr1,3);
+    printf("The element 8 is found at index %d\n",index);
+
+    // struct Array *arr3;
+    // printf("Output of merged array after set operation is \n");
+    // //arr3=Merge(&arr1,&arr2);
+    // //arr3=Union(&arr1,&arr2);
+    // arr3=Intersection(&arr1,&arr2);
+    // if (arr3 != NULL) {
+    // Display(*arr3);
+    // } else {
+    //     printf("Intersection returned NULL.\n");
+    // }
+
+    // Rearrange(&arr1);
+
+    // printf("%d\n",Binary_Seach(arr1,7));
+    // printf("Is Sorted or not %d\n",isSorted(arr1));
+    // Reverse1(&arr1);
+    // Display(arr1);
     return 0;
 }
 

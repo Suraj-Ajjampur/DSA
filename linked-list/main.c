@@ -2,7 +2,13 @@
 #include "main.h"
 
 
-// Creates a linked list based on the array A[] passed as a parameter
+/**
+ * @brief Creates a linked list 
+ * 
+ * @param A[] - Array of elements
+ * 
+ * @param n - number of elements
+ */
 void create(int A[], int n){
     struct Node *t,*last; //one node to add elements, other to traverse
     
@@ -51,11 +57,15 @@ void create2(int A[], int n){
 void DisplayRecursive(struct Node *p){
 
     if(p!=NULL){
+        printf("%d ",p->data);
         DisplayRecursive(p->next);
-        printf("%d\n",p->data);
     }
+    //printf("\n");
 }
 
+/**
+ * @return number of nodes in a linked list  
+*/
 int count(struct Node *p){
     int count = 0;
 
@@ -142,7 +152,7 @@ int Search(struct Node *p, int key){
  * @name Insert
  * 
  * @param p pointer to first node in LL
- * 
+ * z
  * @param index Index to insert new node
  * 
  * @param x Data to insert into the new node
@@ -181,10 +191,11 @@ void Insert(struct Node *p, int index, int x){
 */
 void InsertinSortedPosition(struct Node *p,int x){
 
-    struct Node *t;
+    struct Node *t; //Declare a temp pointer to Node
+    // Allocate dynamic memory
     t=(struct Node *)malloc(sizeof(struct Node));
-    t->data = x;
-    t->next = NULL;
+    t->data = x; //assign data
+    t->next = NULL; //assign next
 
     //LL is empty
     if(first == NULL){
@@ -194,17 +205,20 @@ void InsertinSortedPosition(struct Node *p,int x){
         if(p->data > x){
         t->next = first;
         first = t;
-    }else{ 
-        //Traverse the linked list till condition
-        while(p->next->data < x && p->next != NULL){
-            p = p->next;
         }
-        //Changing the linking
-        t->next = p->next;
-        p->next = t;    
+        else{ 
+            //Traverse the linked list till condition
+            while(p->next->data < x && p->next != NULL)
+            {
+                p = p->next; //assign value
+            }
+            //Changing the linking
+            t->next = p->next;
+            p->next = t;    
     }
     }
 }
+
 int Delete(struct Node *p, int index)
 {
     struct Node *q; //Declare a node to follow p
@@ -235,23 +249,23 @@ int Delete(struct Node *p, int index)
 
 int main(void){
 
-    struct Node *t1, *t2;
+    //struct Node *t1, *t2;
 
     int A[] = {3,5,15};
     int B[] = {4,8,12};
     create(A,3);
     create2(B,3);
 
-    t1=first->next->next;
-    t2=first->next;
-    t1->next = t2;
+    // t1=first->next->next;
+    // t2=first->next;
+    // t1->next = t2;
 
 
     //Insert(first,2,10);
     InsertinSortedPosition(first,6);
     Delete(first,8);
 
-    Display(first);
+    DisplayRecursive(first);
     Display(second);
     Merge(first,second);
 

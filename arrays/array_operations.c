@@ -1,15 +1,6 @@
 #include "array_operations.h"
 
-/**
- * @brief Displays elemets of an array
-*/
-void Display(struct Array arr){
 
-    for(int i = 0;i < arr.Length; i++){
-        printf("%d ",arr.A[i]);
-    }
-    printf("\n");
-}
 
 /**
  * @brief Inserts an element into the array 
@@ -47,11 +38,7 @@ int Delete_element(struct Array* s, int index){
 //     int x = s->A[];
 // }
 
-void swap(int *x, int *y){
-    *x ^= *y;
-    *y = *y ^ *x;
-    *x ^= *y;
-}
+
 
 /**
  * @brief searches for key in array 
@@ -98,3 +85,4 @@ int BinarySearch(struct Array *arr, int key){
     }
     return -1; //key not found
 }
+

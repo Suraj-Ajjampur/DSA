@@ -73,10 +73,5 @@
   "[shellscript]": {
     "files.eol": "\n",
     "files.trimTrailingWhitespace": false
-  },
-  "files.associations": {
-    "stdio.h": "c",
-    "string_view": "c",
-    "paranthesis_matching": "c"
   }
 }

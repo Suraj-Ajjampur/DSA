@@ -191,26 +191,7 @@ void swap(int* xp, int* yp)
     *yp = temp; 
 } 
 
-/**
- * @brief sorts the array
-*/
-int SelectionSort(struct Array *arr){
 
-    int i,j,min_idx;
-
-    // One by one move boundary of unsorted subarray
-    for( i = 0; i < arr->Length-1; i++){
-        // Find the min element in unsorted array
-        min_idx = i;
-        for(j=i+1; j < arr->Length; j++)
-            if(arr->A[j] < arr->A[min_idx])
-                min_idx = j;
-            
-        //Swap the found min element with the first element
-        // of the unsorted sub array
-        swap(&arr->A[min_idx], &arr->A[i]);
-    }
-}
 
 int main()
 {

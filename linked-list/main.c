@@ -60,7 +60,7 @@ void DisplayRecursive(struct Node *p){
         printf("%d ",p->data);
         DisplayRecursive(p->next);
     }
-    //printf("\n");
+    printf("\n");
 }
 
 /**
@@ -108,10 +108,12 @@ void Display(struct Node *p){
     
     //Traversing a linked List
     while(p != NULL){
-        printf("%d\n",p->data);
+        printf("%d ",p->data);
         p = p->next;
     }
+    printf("\n");
 }
+
 /**
  * @brief 
 */
@@ -146,6 +148,43 @@ int Search(struct Node *p, int key){
         p=p->next;
     }
     return -1;
+}
+
+
+
+/**
+ * @brief Inseting in a sorted Linked List
+ * 
+ * 
+*/
+void InsertinSortedPosition(struct Node *p,int x){
+
+    struct Node *t; //Declare a temp pointer to Node
+    // Allocate dynamic memory
+    t=(struct Node *)malloc(sizeof(struct Node));
+    t->data = x; //assign data
+    t->next = NULL; //assign next
+
+    //LL is empty
+    if(first == NULL){
+        first = t;
+    }else{
+        //If the first element is greater 
+        if(p->data > x){
+        t->next = first;
+        first = t;
+        }
+        else{ 
+            //Traverse the linked list till condition
+            while(p->next->data < x && p->next != NULL)
+            {
+                p = p->next; //assign value
+            }
+            //Changing the linking
+            t->next = p->next;
+            p->next = t;    
+    }
+    }
 }
 
 /**
@@ -184,45 +223,10 @@ void Insert(struct Node *p, int index, int x){
     }
 }
 
-/**
- * @brief Inseting in a sorted Linked List
- * 
- * 
-*/
-void InsertinSortedPosition(struct Node *p,int x){
-
-    struct Node *t; //Declare a temp pointer to Node
-    // Allocate dynamic memory
-    t=(struct Node *)malloc(sizeof(struct Node));
-    t->data = x; //assign data
-    t->next = NULL; //assign next
-
-    //LL is empty
-    if(first == NULL){
-        first = t;
-    }else{
-        //If the first element is greater 
-        if(p->data > x){
-        t->next = first;
-        first = t;
-        }
-        else{ 
-            //Traverse the linked list till condition
-            while(p->next->data < x && p->next != NULL)
-            {
-                p = p->next; //assign value
-            }
-            //Changing the linking
-            t->next = p->next;
-            p->next = t;    
-    }
-    }
-}
-
 int Delete(struct Node *p, int index)
 {
     struct Node *q; //Declare a node to follow p
-    int x=-1,i;
+    int x=-1;
 
     if(index <1 || index > count(p))
         return -1;
@@ -235,7 +239,7 @@ int Delete(struct Node *p, int index)
         return x;
     }
     else{
-        for(i=0;i<index-1;i++){
+        for(int i=0;i<index-1;i++){
             q=p;
             p=p->next;
         }
@@ -256,11 +260,10 @@ int main(void){
     create(A,3);
     create2(B,3);
 
-    // t1=first->next->next;
-    // t2=first->next;
-    // t1->next = t2;
-    //Insert(first,2,10);
-    InsertinSortedPosition(first,6);
+    Insert(first,2,10);
+    Display(first);
+
+    // InsertinSortedPosition(first,6);
     Delete(first,8);
 
     DisplayRecursive(first);

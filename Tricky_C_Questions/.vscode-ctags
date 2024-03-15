@@ -1,0 +1,11 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	0.0.0	//
+SIZE_OF	multiply_by_9.c	/^#define SIZE_OF(/;"	d	file:
+SWAP	multiply_by_9.c	/^#define SWAP(/;"	d	file:
+main	multiply_by_9.c	/^int main(){$/;"	f	typeref:typename:int
+size_of	multiply_by_9.c	/^#define size_of(/;"	d	file:

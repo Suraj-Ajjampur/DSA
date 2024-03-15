@@ -1,0 +1,33 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	0.0.0	//
+A	array_operations.h	/^    int A[8];$/;"	m	struct:Array	typeref:typename:int[8]
+ARRAY_OPS_H	array_operations.h	/^#define ARRAY_OPS_H$/;"	d
+Array	array_operations.h	/^struct Array{$/;"	s
+BinarySearch	array_operations.c	/^int BinarySearch(struct Array *arr, int key){$/;"	f	typeref:typename:int
+Binary_Seach	main.c	/^int Binary_Seach(struct Array arr, int key){$/;"	f	typeref:typename:int
+Delete_element	array_operations.c	/^int Delete_element(struct Array* s, int index){$/;"	f	typeref:typename:int
+Display	main.c	/^void Display(struct Array arr){$/;"	f	typeref:typename:void
+Insert_element	array_operations.c	/^void Insert_element(struct Array *arr,int index,int x)$/;"	f	typeref:typename:void
+Insert_into_Sorted_array	main.c	/^void Insert_into_Sorted_array(struct Array *arr, int x){$/;"	f	typeref:typename:void
+Intersection	main.c	/^struct Array* Intersection(struct Array *arr1, struct Array *arr2){$/;"	f	typeref:struct:Array *
+Length	array_operations.h	/^    int Length;$/;"	m	struct:Array	typeref:typename:int
+LinearSearch	array_operations.c	/^int LinearSearch(struct Array *arr, int key){$/;"	f	typeref:typename:int
+Merge	main.c	/^struct Array* Merge(struct Array *arr1, struct Array *arr2){$/;"	f	typeref:struct:Array *
+Rearrange	main.c	/^void Rearrange(struct Array *arr){$/;"	f	typeref:typename:void
+Reverse1	main.c	/^void Reverse1(struct Array *arr){$/;"	f	typeref:typename:void
+SelectionSort	main.c	/^int SelectionSort(struct Array *arr){$/;"	f	typeref:typename:int
+Size	array_operations.h	/^    int Size;$/;"	m	struct:Array	typeref:typename:int
+Union	main.c	/^struct Array* Union(struct Array *arr1, struct Array *arr2){$/;"	f	typeref:struct:Array *
+global_Array	sorting/main.c	/^int global_Array[]={11,13,7,12,16,9,24,5,10,3};$/;"	v	typeref:typename:int[]
+isSorted	main.c	/^int isSorted(struct Array arr){$/;"	f	typeref:typename:int
+main	main.c	/^int main()$/;"	f	typeref:typename:int
+main	sorting/main.c	/^int main()$/;"	f	typeref:typename:int
+partition	sorting/main.c	/^int partition(int arr[],int low,int high)$/;"	f	typeref:typename:int
+quickSort	sorting/main.c	/^void quickSort(int arr[],int low,int high)$/;"	f	typeref:typename:void
+swap	main.c	/^void swap(int* xp, int* yp) $/;"	f	typeref:typename:void
+swap	sorting/main.c	/^void swap(int *x,int *y)$/;"	f	typeref:typename:void

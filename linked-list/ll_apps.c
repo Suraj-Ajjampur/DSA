@@ -3,14 +3,18 @@
 
 void RemoveDuplicate(struct Node *p){
     struct Node *q;
-    q = p->next;
-    while(q!= NULL){
+    if(p == NULL)
+        return;
 
-        if(p->data!=q->data){
+    q = p->next; // p folows q
+
+    while(q!= NULL){ //run till p->next is not null
+
+        if(p->data!=q->data){ //Duplicate not found then simply traverse
             p=q;
-            q=p->next;
+            q=p->next; 
         } 
-        else{
+        else{ // Duplicate found 
             p->next = q->next;
             free(q);
             q=p->next;

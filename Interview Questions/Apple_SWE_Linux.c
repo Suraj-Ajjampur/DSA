@@ -109,10 +109,11 @@ unsigned char *Flipping_Horizatal(const unsigned char *bitmapArray){
 void Display(const unsigned char* image){
   for(int row = 0;row<HEIGHT;row++){
     for(int col =0; col<WIDTH;col++){
-      printf("%c", image[row*WIDTH+col]);
+      printf("%d", image[row*WIDTH+col]);
     }
     printf("\n");
   }
+  fflush(stdout);
   printf("\n\n\n\n\n");
 }
 

@@ -1,0 +1,219 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	0.0.0	//
+%.o	linked-list/Makefile	/^%.o: %.c $(DEPS)$/;"	t
+A	arrays/array_operations.h	/^    int A[8];$/;"	m	struct:Array	typeref:typename:int[8]
+ARRAY_OPS_H	arrays/array_operations.h	/^#define ARRAY_OPS_H$/;"	d
+Array	arrays/array_operations.h	/^struct Array{$/;"	s
+BinarySearch	arrays/array_operations.c	/^int BinarySearch(struct Array *arr, int key){$/;"	f	typeref:typename:int
+Binary_Seach	arrays/main.c	/^int Binary_Seach(struct Array arr, int key){$/;"	f	typeref:typename:int
+CC	linked-list/Makefile	/^CC=gcc$/;"	m
+CFLAGS	linked-list/Makefile	/^CFLAGS=-I.$/;"	m
+CHANGE_POS	Interview Questions/Ashwin_Apple/shift_bits_macro.c	/^#define CHANGE_POS(/;"	d	file:
+DEPS	linked-list/Makefile	/^DEPS = main.h ll_apps.h$/;"	m
+Delete	linked-list/CPP/main.cpp	/^int LinkedList::Delete(int index)$/;"	f	class:LinkedList	typeref:typename:int
+Delete	linked-list/Circular_LL/main.c	/^int Delete(struct Node *p,int index){$/;"	f	typeref:typename:int
+Delete	linked-list/Doubly-LL/main.c	/^int Delete(struct Node *p, int index){$/;"	f	typeref:typename:int
+Delete	linked-list/main.c	/^int Delete(struct Node *p, int index)$/;"	f	typeref:typename:int
+Delete_element	arrays/array_operations.c	/^int Delete_element(struct Array* s, int index){$/;"	f	typeref:typename:int
+Display	Interview Questions/Apple_SWE_Linux.c	/^void Display(const unsigned char* image){$/;"	f	typeref:typename:void
+Display	Interview Questions/common_interview_qs/apple/Determine_sum_of_3integers.c	/^int Display(int *arr, int length){$/;"	f	typeref:typename:int
+Display	Queue/Using_Arrays/main.c	/^void Display(struct Queue q){$/;"	f	typeref:typename:void
+Display	arrays/main.c	/^void Display(struct Array arr){$/;"	f	typeref:typename:void
+Display	linked-list/CPP/main.cpp	/^void LinkedList::Display()$/;"	f	class:LinkedList	typeref:typename:void
+Display	linked-list/Circular_LL/main.c	/^void Display(struct Node *h){$/;"	f	typeref:typename:void
+Display	linked-list/Doubly-LL/main.c	/^void Display(struct Node *p){$/;"	f	typeref:typename:void
+Display	linked-list/main.c	/^void Display(struct Node *p){$/;"	f	typeref:typename:void
+Display	stack/main.c	/^void Display(struct Stack st)$/;"	f	typeref:typename:void
+Display	stack/using_LL/basic_ops.c	/^void Display()$/;"	f	typeref:typename:void
+Display	stack/using_array/basic_ops.c	/^void Display(struct Stack st)$/;"	f	typeref:typename:void
+DisplayRecursive	linked-list/main.c	/^void DisplayRecursive(struct Node *p){$/;"	f	typeref:typename:void
+Flipping_Horizatal	Interview Questions/Apple_SWE_Linux.c	/^unsigned char *Flipping_Horizatal(const unsigned char *bitmapArray){$/;"	f	typeref:typename:unsigned char *
+HEIGHT	Interview Questions/Apple_SWE_Linux.c	/^#define HEIGHT /;"	d	file:
+Head	linked-list/Circular_LL/main.c	/^}*Head;$/;"	v	typeref:struct:Node *
+Insert	linked-list/CPP/main.cpp	/^void LinkedList::Insert(int index,int x)$/;"	f	class:LinkedList	typeref:typename:void
+Insert	linked-list/Circular_LL/main.c	/^void Insert(struct Node *p, int pos, int x){$/;"	f	typeref:typename:void
+Insert	linked-list/Doubly-LL/main.c	/^void Insert(struct Node *p, int index, int val){$/;"	f	typeref:typename:void
+Insert	linked-list/main.c	/^void Insert(struct Node *p, int index, int x){$/;"	f	typeref:typename:void
+Insert_element	arrays/array_operations.c	/^void Insert_element(struct Array *arr,int index,int x)$/;"	f	typeref:typename:void
+Insert_into_Sorted_array	arrays/main.c	/^void Insert_into_Sorted_array(struct Array *arr, int x){$/;"	f	typeref:typename:void
+InsertinSortedPosition	linked-list/main.c	/^void InsertinSortedPosition(struct Node *p,int x){$/;"	f	typeref:typename:void
+Intersection	arrays/main.c	/^struct Array* Intersection(struct Array *arr1, struct Array *arr2){$/;"	f	typeref:struct:Array *
+LL_APP_H	linked-list/ll_apps.h	/^#define LL_APP_H$/;"	d
+Length	arrays/array_operations.h	/^    int Length;$/;"	m	struct:Array	typeref:typename:int
+Length	linked-list/CPP/main.cpp	/^int LinkedList::Length()$/;"	f	class:LinkedList	typeref:typename:int
+Length	linked-list/Circular_LL/main.c	/^int Length(struct Node *p){$/;"	f	typeref:typename:int
+Length	linked-list/Doubly-LL/main.c	/^int Length(struct Node *p){$/;"	f	typeref:typename:int
+LinearSearch	arrays/array_operations.c	/^int LinearSearch(struct Array *arr, int key){$/;"	f	typeref:typename:int
+LinkedList	linked-list/CPP/main.cpp	/^    LinkedList(){first=NULL;}$/;"	f	class:LinkedList	file:
+LinkedList	linked-list/CPP/main.cpp	/^LinkedList::LinkedList(int A[],int n)$/;"	f	class:LinkedList
+LinkedList	linked-list/CPP/main.cpp	/^class LinkedList$/;"	c	file:
+MAIN_H	linked-list/main.h	/^#define MAIN_H$/;"	d
+MASK_HIGHER	Interview Questions/Ashwin_Apple/shift_bits_macro.c	/^#define MASK_HIGHER(/;"	d	file:
+MASK_LOWER	Interview Questions/Ashwin_Apple/shift_bits_macro.c	/^#define MASK_LOWER(/;"	d	file:
+MAX_SIZE	strings/RLE.c	/^#define MAX_SIZE /;"	d	file:
+Max	linked-list/main.c	/^int Max(struct Node *p){$/;"	f	typeref:typename:int
+Merge	arrays/main.c	/^struct Array* Merge(struct Array *arr1, struct Array *arr2){$/;"	f	typeref:struct:Array *
+Merge	linked-list/ll_apps.c	/^void Merge(struct Node *p, struct Node *q){$/;"	f	typeref:typename:void
+NO_OF_CHARS	Interview Questions/Ashwin_Apple/anagram.c	/^#define NO_OF_CHARS /;"	d	file:
+Node	Queue/Using_LinkedList/ll_queue.c	/^struct Node$/;"	s	file:
+Node	linked-list/CPP/main.cpp	/^class Node$/;"	c	file:
+Node	linked-list/Circular_LL/main.c	/^struct Node{$/;"	s	file:
+Node	linked-list/Doubly-LL/main.c	/^struct Node{$/;"	s	file:
+Node	linked-list/main.h	/^struct Node$/;"	s
+Node	stack/problems_on_stack/paranthesis_matching.c	/^struct Node$/;"	s	file:
+Node	stack/using_LL/basic_ops.c	/^struct Node$/;"	s	file:
+OBJ	linked-list/Makefile	/^OBJ = main.o ll_apps.o stack.o$/;"	m
+Q	Queue/Using_Arrays/main.c	/^    int *Q; \/\/space for storing set of elements$/;"	m	struct:Queue	typeref:typename:int *	file:
+Queue	Queue/Using_Arrays/main.c	/^struct Queue{$/;"	s	file:
+RDisplay	linked-list/Circular_LL/main.c	/^void RDisplay(struct Node *h){$/;"	f	typeref:typename:void
+RGB565	Interview Questions/Analog_Devices.c	/^uint16_t RGB565;$/;"	v	typeref:typename:uint16_t
+Rearrange	arrays/main.c	/^void Rearrange(struct Array *arr){$/;"	f	typeref:typename:void
+RemoveDuplicate	linked-list/ll_apps.c	/^void RemoveDuplicate(struct Node *p){$/;"	f	typeref:typename:void
+Reverse	linked-list/Doubly-LL/main.c	/^void Reverse(struct Node *p){$/;"	f	typeref:typename:void
+Reverse1	arrays/main.c	/^void Reverse1(struct Array *arr){$/;"	f	typeref:typename:void
+Reverse1	linked-list/ll_apps.c	/^void Reverse1(struct Node*p){$/;"	f	typeref:typename:void
+Reverse_2	linked-list/ll_apps.c	/^void Reverse_2(struct Node *p){$/;"	f	typeref:typename:void
+Reverse_3	linked-list/ll_apps.c	/^void Reverse_3(struct Node *q, struct Node *p){$/;"	f	typeref:typename:void
+S	stack/main.c	/^    int *S;$/;"	m	struct:Stack	typeref:typename:int *	file:
+S	stack/using_array/basic_ops.c	/^    int *S;$/;"	m	struct:Stack	typeref:typename:int *	file:
+SIZE_OF	Tricky_C_Questions/multiply_by_9.c	/^#define SIZE_OF(/;"	d	file:
+SWAP	Tricky_C_Questions/multiply_by_9.c	/^#define SWAP(/;"	d	file:
+Search	linked-list/main.c	/^int Search(struct Node *p, int key){$/;"	f	typeref:typename:int
+SearchTransposition	linked-list/main.c	/^struct Node* SearchTransposition(struct Node *p, int key){$/;"	f	typeref:struct:Node *
+SelectionSort	arrays/sorting/main.c	/^int SelectionSort(int arr[],int array_length){$/;"	f	typeref:typename:int
+Selection_Sort	Interview Questions/common_interview_qs/apple/Determine_sum_of_3integers.c	/^void Selection_Sort(int *arr, int arr_length){$/;"	f	typeref:typename:void
+Size	arrays/array_operations.h	/^    int Size;$/;"	m	struct:Array	typeref:typename:int
+Stack	stack/main.c	/^struct Stack$/;"	s	file:
+Stack	stack/using_array/basic_ops.c	/^struct Stack$/;"	s	file:
+Sum	linked-list/main.c	/^int Sum(struct Node *p){$/;"	f	typeref:typename:int
+Union	arrays/main.c	/^struct Array* Union(struct Array *arr1, struct Array *arr2){$/;"	f	typeref:struct:Array *
+WIDTH	Interview Questions/Apple_SWE_Linux.c	/^#define WIDTH /;"	d	file:
+__anon32ced3fe0103	Interview Questions/Apple_Embedded_Software_Engineer.c	/^typedef enum{$/;"	g	file:
+__anon32ced3fe0103	Interview Questions/Apple_Embedded_Software_Engineer.c	/^}bool;$/;"	t	typeref:enum:bool	file:
+__anonca90e66b0103	stack/problems_on_stack/paranthesis_matching.c	/^typedef enum {$/;"	g	file:
+__anonca90e66b0103	stack/problems_on_stack/paranthesis_matching.c	/^}bool;$/;"	t	typeref:enum:bool	file:
+areAnagram	Interview Questions/Ashwin_Apple/anagram.c	/^bool areAnagram(char* str1, char* str2)$/;"	f	typeref:typename:bool
+bitmapArray	Interview Questions/Apple_SWE_Linux.c	/^const unsigned char bitmapArray [] = {$/;"	v	typeref:typename:const unsigned char[]
+bitmapCountSetInRange	Interview Questions/Microsoft.c	/^uint32_t bitmapCountSetInRange(uint32_t *map, uint32_t mapSize, uint32_t rangeStart, uint32_t ra/;"	f	typeref:typename:uint32_t
+cache	strings/RLE.c	/^int cache[MAX_SIZE][MAX_SIZE][MAX_SIZE]; \/\/ Cache for memoization$/;"	v	typeref:typename:int[][][]
+clean	linked-list/Makefile	/^clean:$/;"	t
+compress	strings/string_compression.c	/^int compress(char* chars, int charsSize) {$/;"	f	typeref:typename:int
+count	linked-list/main.c	/^int count(struct Node *p){$/;"	f	typeref:typename:int
+count	strings/RLE.c	/^int count[MAX_SIZE]; \/\/ To store the count of each character's appearance in sequence$/;"	v	typeref:typename:int[]
+countSetBits	Interview Questions/Microsoft.c	/^uint32_t countSetBits(uint32_t n) {$/;"	f	typeref:typename:uint32_t
+create	Queue/Using_Arrays/main.c	/^void create(struct Queue *q,int size){$/;"	f	typeref:typename:void
+create	linked-list/Circular_LL/main.c	/^void create(int A[],int n){$/;"	f	typeref:typename:void
+create	linked-list/Doubly-LL/main.c	/^void create(int A[], int n){$/;"	f	typeref:typename:void
+create	linked-list/main.c	/^void create(int A[], int n){$/;"	f	typeref:typename:void
+create	stack/main.c	/^void create(struct Stack *st)$/;"	f	typeref:typename:void
+create	stack/using_array/basic_ops.c	/^void create(struct Stack *st)$/;"	f	typeref:typename:void
+create2	linked-list/main.c	/^void create2(int A[], int n){$/;"	f	typeref:typename:void
+data	Queue/Using_LinkedList/ll_queue.c	/^    int data;$/;"	m	struct:Node	typeref:typename:int	file:
+data	linked-list/CPP/main.cpp	/^    int data;$/;"	m	class:Node	typeref:typename:int	file:
+data	linked-list/Circular_LL/main.c	/^    int data;           $/;"	m	struct:Node	typeref:typename:int	file:
+data	linked-list/Doubly-LL/main.c	/^    int data;$/;"	m	struct:Node	typeref:typename:int	file:
+data	linked-list/main.h	/^    int data;$/;"	m	struct:Node	typeref:typename:int
+data	stack/problems_on_stack/paranthesis_matching.c	/^    char data;$/;"	m	struct:Node	typeref:typename:char	file:
+data	stack/using_LL/basic_ops.c	/^    int data;$/;"	m	struct:Node	typeref:typename:int	file:
+dequeue	Queue/Using_Arrays/main.c	/^int dequeue(struct Queue *q){$/;"	f	typeref:typename:int
+dequeue	Queue/Using_LinkedList/ll_queue.c	/^int dequeue(void){$/;"	f	typeref:typename:int
+display	Queue/Using_LinkedList/ll_queue.c	/^void display(struct Node *p){$/;"	f	typeref:typename:void
+enqueue	Queue/Using_Arrays/main.c	/^void enqueue(struct Queue *q, int x){$/;"	f	typeref:typename:void
+enqueue	Queue/Using_LinkedList/ll_queue.c	/^void enqueue(int x){$/;"	f	typeref:typename:void
+find_sum_of_three	Interview Questions/common_interview_qs/apple/Determine_sum_of_3integers.c	/^bool find_sum_of_three(int *arr, int required_sum, int arr_length) {$/;"	f	typeref:typename:bool
+find_sum_of_two	Interview Questions/common_interview_qs/apple/Determine_sum_of_3integers.c	/^bool find_sum_of_two(int *arr, int val, size_t start_index, int arr_length){$/;"	f	typeref:typename:bool
+first	linked-list/CPP/main.cpp	/^    Node *first;$/;"	m	class:LinkedList	typeref:typename:Node *	file:
+first	linked-list/Doubly-LL/main.c	/^}*first = NULL;$/;"	v	typeref:struct:Node *
+first	linked-list/main.h	/^}*first,*head,*tail,*second;$/;"	v	typeref:struct:Node *
+getLengthOfOptimalCompression	strings/RLE.c	/^int getLengthOfOptimalCompression(char* s, int k) {$/;"	f	typeref:typename:int
+global_Array	arrays/sorting/main.c	/^int global_Array[]={11,13,7,12,16,9,24,5,10,3};$/;"	v	typeref:typename:int[]
+global_Array_2	arrays/sorting/main.c	/^int global_Array_2[]={15,14,29,12,16,9,24,5,10,3};$/;"	v	typeref:typename:int[]
+head	Queue/Using_Arrays/main.c	/^    int head;$/;"	m	struct:Queue	typeref:typename:int	file:
+head	Queue/Using_LinkedList/ll_queue.c	/^}*head,*tail;$/;"	v	typeref:struct:Node *
+head	linked-list/main.h	/^}*first,*head,*tail,*second;$/;"	v	typeref:struct:Node **
+isBalance	stack/problems_on_stack/paranthesis_matching.c	/^int isBalance(char *exp){$/;"	f	typeref:typename:int
+isBigEndian	Interview Questions/Apple_Embedded_Software_Engineer.c	/^bool isBigEndian()$/;"	f	typeref:typename:bool
+isEmpty	stack/main.c	/^int isEmpty(struct Stack st)$/;"	f	typeref:typename:int
+isEmpty	stack/problems_on_stack/paranthesis_matching.c	/^bool isEmpty(){$/;"	f	typeref:typename:bool
+isEmpty	stack/using_array/basic_ops.c	/^int isEmpty(struct Stack st)$/;"	f	typeref:typename:int
+isFull	stack/main.c	/^int isFull(struct Stack st)$/;"	f	typeref:typename:int
+isFull	stack/using_array/basic_ops.c	/^int isFull(struct Stack st)$/;"	f	typeref:typename:int
+isLoop	linked-list/ll_apps.c	/^bool isLoop(struct Node* f){$/;"	f	typeref:typename:bool
+isSorted	arrays/main.c	/^int isSorted(struct Array arr){$/;"	f	typeref:typename:int
+main	Interview Questions/Analog_Devices.c	/^int main() $/;"	f	typeref:typename:int
+main	Interview Questions/Apple_Embedded_Software_Engineer.c	/^int main() {$/;"	f	typeref:typename:int
+main	Interview Questions/Apple_SWE_Linux.c	/^int main(){$/;"	f	typeref:typename:int
+main	Interview Questions/Ashwin_Apple/anagram.c	/^int main()$/;"	f	typeref:typename:int
+main	Interview Questions/Ashwin_Apple/shift_bits_macro.c	/^int main(){$/;"	f	typeref:typename:int
+main	Interview Questions/Microsoft.c	/^int main() {$/;"	f	typeref:typename:int
+main	Interview Questions/common_interview_qs/apple/Determine_sum_of_3integers.c	/^int main(void){$/;"	f	typeref:typename:int
+main	Queue/Using_Arrays/main.c	/^int main(){$/;"	f	typeref:typename:int
+main	Queue/Using_LinkedList/ll_queue.c	/^int main(){$/;"	f	typeref:typename:int
+main	Tricky_C_Questions/multiply_by_9.c	/^int main(){$/;"	f	typeref:typename:int
+main	arrays/main.c	/^int main()$/;"	f	typeref:typename:int
+main	arrays/sorting/main.c	/^int main()$/;"	f	typeref:typename:int
+main	hello_world.c	/^int main() {$/;"	f	typeref:typename:int
+main	leetcode/48_Rotateby90deg.c	/^int main() {$/;"	f	typeref:typename:int
+main	linked-list/CPP/main.cpp	/^int main()$/;"	f	typeref:typename:int
+main	linked-list/Circular_LL/main.c	/^int main (){$/;"	f	typeref:typename:int
+main	linked-list/Doubly-LL/main.c	/^int main(){$/;"	f	typeref:typename:int
+main	linked-list/main.c	/^int main(void){$/;"	f	typeref:typename:int
+main	stack/main.c	/^int main()$/;"	f	typeref:typename:int
+main	stack/problems_on_stack/paranthesis_matching.c	/^int main(){$/;"	f	typeref:typename:int
+main	stack/using_LL/basic_ops.c	/^int main()$/;"	f	typeref:typename:int
+main	stack/using_array/basic_ops.c	/^int main()$/;"	f	typeref:typename:int
+main	strings/RLE.c	/^int main() {$/;"	f	typeref:typename:int
+main	strings/main.c	/^int main(void){$/;"	f	typeref:typename:int
+main	strings/string_compression.c	/^int main() {$/;"	f	typeref:typename:int
+next	Queue/Using_LinkedList/ll_queue.c	/^    struct Node* next;$/;"	m	struct:Node	typeref:struct:Node *	file:
+next	linked-list/CPP/main.cpp	/^    Node *next;$/;"	m	class:Node	typeref:typename:Node *	file:
+next	linked-list/Circular_LL/main.c	/^    struct Node *next;$/;"	m	struct:Node	typeref:struct:Node *	file:
+next	linked-list/Doubly-LL/main.c	/^    struct Node *next;$/;"	m	struct:Node	typeref:struct:Node *	file:
+next	linked-list/main.h	/^    struct Node* next;$/;"	m	struct:Node	typeref:struct:Node *
+next	stack/problems_on_stack/paranthesis_matching.c	/^    struct Node *next;$/;"	m	struct:Node	typeref:struct:Node *	file:
+next	stack/using_LL/basic_ops.c	/^    struct Node *next;$/;"	m	struct:Node	typeref:struct:Node *	file:
+partition	arrays/sorting/main.c	/^int partition(int arr[],int low,int high)$/;"	f	typeref:typename:int
+peek	stack/main.c	/^int peek(struct Stack st,int index)$/;"	f	typeref:typename:int
+peek	stack/using_array/basic_ops.c	/^int peek(struct Stack st,int index)$/;"	f	typeref:typename:int
+pop	linked-list/stack.c	/^int pop(struct Node* p){$/;"	f	typeref:typename:int
+pop	stack/main.c	/^int pop(struct Stack *st)$/;"	f	typeref:typename:int
+pop	stack/problems_on_stack/paranthesis_matching.c	/^char pop()$/;"	f	typeref:typename:char
+pop	stack/using_LL/basic_ops.c	/^int pop()$/;"	f	typeref:typename:int
+pop	stack/using_array/basic_ops.c	/^int pop(struct Stack *st)$/;"	f	typeref:typename:int
+prev	linked-list/Doubly-LL/main.c	/^    struct Node *prev;$/;"	m	struct:Node	typeref:struct:Node *	file:
+printMatrix	leetcode/48_Rotateby90deg.c	/^void printMatrix(int** matrix, int matrixSize) {$/;"	f	typeref:typename:void
+program	linked-list/Makefile	/^program: $(OBJ)$/;"	t
+push	linked-list/stack.c	/^void push(struct Node *p, int x){$/;"	f	typeref:typename:void
+push	stack/main.c	/^void push(struct Stack *st,int x)$/;"	f	typeref:typename:void
+push	stack/problems_on_stack/paranthesis_matching.c	/^void push(char x)$/;"	f	typeref:typename:void
+push	stack/using_LL/basic_ops.c	/^void push(int x)$/;"	f	typeref:typename:void
+push	stack/using_array/basic_ops.c	/^void push(struct Stack *st,int x)$/;"	f	typeref:typename:void
+quickSort	arrays/sorting/main.c	/^void quickSort(int arr[],int low,int high)$/;"	f	typeref:typename:void
+rgb888_to_rgb565	Interview Questions/Analog_Devices.c	/^uint16_t* rgb888_to_rgb565(uint8_t* data)$/;"	f	typeref:typename:uint16_t *
+rotate	leetcode/48_Rotateby90deg.c	/^void rotate(int** matrix, int matrixSize, int* matrixColSize) {$/;"	f	typeref:typename:void
+rotate90	Interview Questions/Apple_Embedded_Software_Engineer.c	/^int *rotate90(int *array, int N, int M)$/;"	f	typeref:typename:int *
+second	linked-list/main.h	/^}*first,*head,*tail,*second;$/;"	v	typeref:struct:Node ****
+show	Tricky_C_Questions/multiply_by_9.c	/^void show(int x, int y){$/;"	f	typeref:typename:void
+size	Queue/Using_Arrays/main.c	/^    int size;$/;"	m	struct:Queue	typeref:typename:int	file:
+size	stack/main.c	/^    int size;$/;"	m	struct:Stack	typeref:typename:int	file:
+size	stack/using_array/basic_ops.c	/^    int size;$/;"	m	struct:Stack	typeref:typename:int	file:
+size_of	Tricky_C_Questions/multiply_by_9.c	/^#define size_of(/;"	d	file:
+stackTop	stack/main.c	/^int stackTop(struct Stack st)$/;"	f	typeref:typename:int
+stackTop	stack/using_array/basic_ops.c	/^int stackTop(struct Stack st)$/;"	f	typeref:typename:int
+swap	Interview Questions/common_interview_qs/apple/Determine_sum_of_3integers.c	/^void swap(int *x, int *y){$/;"	f	typeref:typename:void
+swap	arrays/main.c	/^void swap(int* xp, int* yp) $/;"	f	typeref:typename:void
+swap	arrays/sorting/main.c	/^void swap(int *x,int *y)$/;"	f	typeref:typename:void
+tail	Queue/Using_Arrays/main.c	/^    int tail;$/;"	m	struct:Queue	typeref:typename:int	file:
+tail	Queue/Using_LinkedList/ll_queue.c	/^}*head,*tail;$/;"	v	typeref:struct:Node **
+tail	linked-list/main.h	/^}*first,*head,*tail,*second;$/;"	v	typeref:struct:Node ***
+third	linked-list/ll_apps.h	/^struct Node *third;$/;"	v	typeref:struct:Node *
+top	stack/main.c	/^    int top;$/;"	m	struct:Stack	typeref:typename:int	file:
+top	stack/problems_on_stack/paranthesis_matching.c	/^}*top=NULL;$/;"	v	typeref:struct:Node *
+top	stack/using_LL/basic_ops.c	/^}*top=NULL;$/;"	v	typeref:struct:Node *
+top	stack/using_array/basic_ops.c	/^    int top;$/;"	m	struct:Stack	typeref:typename:int	file:
+~LinkedList	linked-list/CPP/main.cpp	/^LinkedList::~LinkedList()$/;"	f	class:LinkedList

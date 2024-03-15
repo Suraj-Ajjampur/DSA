@@ -50,6 +50,10 @@ void Display()
     printf("\n");
 }
 
+void peek(){
+    
+}
+
 int main()
 {
     push(10);

@@ -1,0 +1,40 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	0.0.0	//
+CHANGE_POS	Ashwin_Apple/shift_bits_macro.c	/^#define CHANGE_POS(/;"	d	file:
+Display	Apple_SWE_Linux.c	/^void Display(const unsigned char* image){$/;"	f	typeref:typename:void
+Display	common_interview_qs/apple/Determine_sum_of_3integers.c	/^int Display(int *arr, int length){$/;"	f	typeref:typename:int
+Flipping_Horizatal	Apple_SWE_Linux.c	/^unsigned char *Flipping_Horizatal(const unsigned char *bitmapArray){$/;"	f	typeref:typename:unsigned char *
+HEIGHT	Apple_SWE_Linux.c	/^#define HEIGHT /;"	d	file:
+M	Apple_Embedded_Software_Engineer.c	/^int N = 3, M = 4;$/;"	v	typeref:typename:int
+MASK_HIGHER	Ashwin_Apple/shift_bits_macro.c	/^#define MASK_HIGHER(/;"	d	file:
+MASK_LOWER	Ashwin_Apple/shift_bits_macro.c	/^#define MASK_LOWER(/;"	d	file:
+N	Apple_Embedded_Software_Engineer.c	/^int N = 3, M = 4;$/;"	v	typeref:typename:int
+NO_OF_CHARS	Ashwin_Apple/anagram.c	/^#define NO_OF_CHARS /;"	d	file:
+RGB565	Analog_Devices.c	/^uint16_t RGB565;$/;"	v	typeref:typename:uint16_t
+Selection_Sort	common_interview_qs/apple/Determine_sum_of_3integers.c	/^void Selection_Sort(int *arr, int arr_length){$/;"	f	typeref:typename:void
+WIDTH	Apple_SWE_Linux.c	/^#define WIDTH /;"	d	file:
+__anon81bcf7470103	Apple_Embedded_Software_Engineer.c	/^typedef enum{$/;"	g	file:
+__anon81bcf7470103	Apple_Embedded_Software_Engineer.c	/^}bool;$/;"	t	typeref:enum:bool	file:
+areAnagram	Ashwin_Apple/anagram.c	/^bool areAnagram(char* str1, char* str2)$/;"	f	typeref:typename:bool
+bitmapArray	Apple_SWE_Linux.c	/^const unsigned char bitmapArray [] = {$/;"	v	typeref:typename:const unsigned char[]
+bitmapCountSetInRange	Microsoft.c	/^uint32_t bitmapCountSetInRange(uint32_t *map, uint32_t mapSize, uint32_t rangeStart, uint32_t ra/;"	f	typeref:typename:uint32_t
+countSetBits	Microsoft.c	/^uint32_t countSetBits(uint32_t n) {$/;"	f	typeref:typename:uint32_t
+find_sum_of_three	common_interview_qs/apple/Determine_sum_of_3integers.c	/^bool find_sum_of_three(int *arr, int required_sum, int arr_length) {$/;"	f	typeref:typename:bool
+find_sum_of_two	common_interview_qs/apple/Determine_sum_of_3integers.c	/^bool find_sum_of_two(int *arr, int val, size_t start_index, int arr_length){$/;"	f	typeref:typename:bool
+isBigEndian	Apple_Embedded_Software_Engineer.c	/^bool isBigEndian()$/;"	f	typeref:typename:bool
+main	Analog_Devices.c	/^int main() $/;"	f	typeref:typename:int
+main	Apple_Embedded_Software_Engineer.c	/^int main() {$/;"	f	typeref:typename:int
+main	Apple_SWE_Linux.c	/^int main(){$/;"	f	typeref:typename:int
+main	Ashwin_Apple/anagram.c	/^int main()$/;"	f	typeref:typename:int
+main	Ashwin_Apple/shift_bits_macro.c	/^int main(){$/;"	f	typeref:typename:int
+main	Microsoft.c	/^int main() {$/;"	f	typeref:typename:int
+main	common_interview_qs/apple/Determine_sum_of_3integers.c	/^int main(void){$/;"	f	typeref:typename:int
+originalArray	Apple_Embedded_Software_Engineer.c	/^int originalArray[3][4] = {$/;"	v	typeref:typename:int[3][4]
+rgb888_to_rgb565	Analog_Devices.c	/^uint16_t* rgb888_to_rgb565(uint8_t* data)$/;"	f	typeref:typename:uint16_t *
+rotate90	Apple_Embedded_Software_Engineer.c	/^int *rotate90(int *array, int Rows, int Cols)$/;"	f	typeref:typename:int *
+swap	common_interview_qs/apple/Determine_sum_of_3integers.c	/^void swap(int *x, int *y){$/;"	f	typeref:typename:void

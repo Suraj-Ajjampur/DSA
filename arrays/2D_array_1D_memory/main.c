@@ -1,9 +1,3 @@
-/**
- * @ref 1. https://www.geeksforgeeks.org/enumeration-enum-c/
- *      2. https://www.geeksforgeeks.org/typedef-in-c/
- *      3. https://www.geeksforgeeks.org/little-and-big-endian-mystery/
- * 
- */
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -14,26 +8,15 @@ int originalArray[3][4] = {
         {9, 10, 11, 12}
     };
 
-// Topics enums, typedef, endianness
-// To execute C, please define "int main()"
-typedef enum{
-  false,
-  true
-}bool;
-
-bool isBigEndian();
 int *rotate90_clockwise(int *array, int Rows, int Cols);
 int *rotate90_anti_clockwise(int *array, int Rows, int Cols);
 int *rotate180(int *array, int Rows, int Cols);
+int *flip_horizontal(int *array, int Rows, int Cols);
+int *flip_vertical(int *array, int Rows, int Cols);
+
+//write for flipping horizontally and vertically
 
 int main() {
-  if(isBigEndian() == true)
-    printf("Big Endian\n");
-  else
-    printf("Little endian\n");
-
-    // Example test case: 3x4 array (N=3, M=4)
-
 
     // Convert 2D array to 1D array for passing to rotate90
     int* array = (int*)originalArray;
@@ -42,6 +25,8 @@ int main() {
     int* rotatedArray = rotate90_clockwise(array, N, M);
     int *rotatedAnticlockwise = rotate90_anti_clockwise(array,N,M);
     int *rotate180deg = rotate180(array,N,M);
+    int *flipped_hor = flip_horizontal(array,N,M);
+    int *flipped_vert = flip_vertical(array,N,M);
 
     // Print the original array
     printf("Original Array:\n");
@@ -79,37 +64,31 @@ int main() {
         }
         printf("\n");
     }
+    // Print the flipped array
+    printf("\nFlipped Array Horizontally:\n");
+    for (int i = 0; i < N; i++) { // Notice the swapped dimensions
+        for (int j = 0; j < M; j++) {
+            printf("%d ", flipped_hor[i*M + j]);
+            fflush(stdout);
+        }
+        printf("\n");
+    }
+
+    // Print the flipped array
+    printf("\nFlipped Array Vertically:\n");
+    for (int i = 0; i < N; i++) { // Notice the swapped dimensions
+        for (int j = 0; j < M; j++) {
+            printf("%d ", flipped_vert[i*M + j]);
+            fflush(stdout);
+        }
+        printf("\n");
+    }
 
     // Free the rotated array to avoid memory leaks
     free(rotatedArray);
     free(rotatedAnticlockwise);
     free(rotate180deg);
   return 0;
-}
-
-//1. 
-//use typedef to define the bool
-//function to bytes in memory from location start to start+n
-bool isBigEndian()
-{
-  bool res; //Random value assigned
-  printf("Init val of typedef enum %d \n",res);
-
-  unsigned int i = 1; //0x00 01 Big
-                      //0x01 00 - Little
-                      //0xAB CD
-                      //0xCD AB //Little
-                      //0xAB CD //Big endian representation
-                      
-  // a character pointer c is Since size of character is 1 byte when the character pointer 
-  // is de-referenced it will contain only first byte of integer.pointing to an integer i. 
-  char* c = (char *)&i;
-  if(*c){
-    res = false; // Little Endian
-  }else{
-    res = true; // Big Endian
-  }
-  return res;
 }
 
 //2. array[N*M], rotate the array by 90 degrees clockwise, N rows by M columns.
@@ -190,3 +169,53 @@ int *rotate180(int *array, int Rows, int Cols) {
 }
   
 
+int *flip_horizontal(int *array, int Rows, int Cols) {
+    int *flippedArray = (int *)malloc(sizeof(int) * Rows * Cols);
+    if(!flippedArray) // Insufficient heap space
+        return NULL;
+
+    for (int originalRow = 0; originalRow < Rows; originalRow++) {
+        for (int originalCol = 0; originalCol < Cols; originalCol++) {
+            // Keep the row index unchanged
+            int newRow = originalRow;
+            // Reverse the column index within the same row
+            int newCol = Cols - 1 - originalCol;
+            
+            // Calculating the new index for the element in the flipped array
+            int newIndex = newRow * Cols + newCol;
+            
+            // Original index of the element in the array before flipping
+            int originalIndex = originalRow * Cols + originalCol;
+            
+            // Assigning the element to its new position in the flipped array
+            flippedArray[newIndex] = array[originalIndex];
+        }
+    }
+    return flippedArray; // Return the newly flipped array
+}
+
+
+int *flip_vertical(int *array, int Rows, int Cols) {
+    int *flippedArray = (int *)malloc(sizeof(int) * Rows * Cols);
+    if(!flippedArray) // Insufficient heap space
+        return NULL;
+
+    for (int originalRow = 0; originalRow < Rows; originalRow++) {
+        for (int originalCol = 0; originalCol < Cols; originalCol++) {
+            // Keep the row index unchanged
+            int newRow = Rows -1 - originalRow;
+            // Reverse the column index within the same row
+            int newCol = originalCol;
+            
+            // Calculating the new index for the element in the flipped array
+            int newIndex = newRow * Cols + newCol;
+            
+            // Original index of the element in the array before flipping
+            int originalIndex = originalRow * Cols + originalCol;
+            
+            // Assigning the element to its new position in the flipped array
+            flippedArray[newIndex] = array[originalIndex];
+        }
+    }
+    return flippedArray; // Return the newly flipped array
+}

@@ -43,6 +43,15 @@ int main(){
     printf("Enter 3 numbers\n");
     scanf("%d %d %d", &a,&b,&c);
 
+    //How to check endianness of the computer.
+    int i = 1;
+
+    char *char_pointer = (char *)&i;
+    if(*char_pointer)
+        printf("Little Endianness\n");
+    else 
+        printf("Big Endianness\n");
+    
     int negative_bitmask = (1 << 15);
     printf("Smallest number is ");
     if((a-b) & negative_bitmask){

@@ -15,11 +15,21 @@
  * and the incremented address is displayed in terms of char type, then the difference will be displayed as 2, 
  * because the difference is actually 2 blocks or 2 bytes in terms of char type representation.
 */
+
 #define size_of(x) ((char *)(&x+1) - (char*)&x)
 
 #define SIZE_OF(T) (((T *)0)+1)
 
 #define SWAP(a,b) (((a) == (b)) || (((a) ^= (b)), ((b) ^= (a)), ((a) ^= (b))))
+
+// A normal function with an int parameter
+// and void return type
+void fun(int a)
+{
+printf("Value of a is %d\n", a);
+}
+
+
 
 
 void show(int x, int y){
@@ -29,6 +39,16 @@ void show(int x, int y){
     }
 }
 int main(){
+
+    void (*fun_ptr)(int) = &fun;
+
+    /* The above line is equivalent of following two
+    void (*fun_ptr)(int);
+    fun_ptr = &fun;
+    */
+
+    // Invoking fun() using fun_ptr
+    (*fun_ptr)(10);
     int n;
 
     n = 3;

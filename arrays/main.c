@@ -4,7 +4,9 @@
 #include <malloc.h>
 #include "array_operations.h"
 
-
+/**
+ * @brief searches a key in the array 
+*/
 int Binary_Seach(struct Array arr, int key){
     int l =0, h = arr.Length -1, mid;
 
@@ -22,7 +24,9 @@ int Binary_Seach(struct Array arr, int key){
     }
     return -1;
 }
-
+/**
+ * 
+*/
 void Reverse1(struct Array *arr){
     int *B;
     int i,j;

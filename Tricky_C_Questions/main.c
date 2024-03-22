@@ -29,8 +29,25 @@ void fun(int a)
 printf("Value of a is %d\n", a);
 }
 
+//custom datatype bool
+typedef enum{
+    false,
+    true
+}bool;
 
+bool check_for_endianness(){
+    int n = 0x01;
 
+    char *char_pointer = (char*)&n; //copies most significant byte
+
+    printf("Storage of mutibyte data-types in this machine is -");
+
+    if(*char_pointer != 0)
+        printf("Little Endian\n");
+
+    else
+        printf("Big Endian\n");
+};
 
 void show(int x, int y){
     if(x<=y){
@@ -38,6 +55,33 @@ void show(int x, int y){
     show(x+1,y);
     }
 }
+
+void smallestof3_wocomparison(void){
+    //Write a C-program to find the smallest of three integers without using any of the comparision operators.
+    int a,b,c;
+    printf("Enter 3 numbers\n");
+    scanf("%d %d %d", &a,&b,&c);
+
+    //How to check endianness of the computer.
+    check_for_endianness();
+    
+    int negative_bitmask = (1 << 15);
+    printf("Smallest number is ");
+    if((a-b) & negative_bitmask){
+        if((a-c) & negative_bitmask)
+            printf("%d\n", a);
+        else    
+            printf("%d\n", c);
+    }
+    else{
+        if((b-c) & negative_bitmask)
+            printf("%d\n", b);
+        else    
+            printf("%d\n", c);
+    }
+}
+
+
 int main(){
 
     void (*fun_ptr)(int) = &fun;
@@ -58,43 +102,16 @@ int main(){
     // printf("size of variable n is %ld\n", size_of(n));
     int m = 30;
 
-    //Write a C-program to find the smallest of three integers without using any of the comparision operators.
-    int a,b,c;
-    printf("Enter 3 numbers\n");
-    scanf("%d %d %d", &a,&b,&c);
-
-    //How to check endianness of the computer.
-    int i = 1;
-
-    char *char_pointer = (char *)&i;
-    if(*char_pointer)
-        printf("Little Endianness\n");
-    else 
-        printf("Big Endianness\n");
-    
-    int negative_bitmask = (1 << 15);
-    printf("Smallest number is ");
-    if((a-b) & negative_bitmask){
-        if((a-c) & negative_bitmask)
-            printf("%d\n", a);
-        else    
-            printf("%d\n", c);
-    }
-    else{
-        if((b-c) & negative_bitmask)
-            printf("%d\n", b);
-        else    
-            printf("%d\n", c);
-    }
-
     //WAP to print 100 times “Hello” without using loop & goto statement.
     show(1,100);
 
     //Write a C-program which does the addition of two integers without using ‘+’ operator.
     printf("Result of addition with + is %d\n", m -(-n));
 
+    smallestof3_wocomparison();
     SWAP(n,n);
     printf("new n val is %d and new n val is %d\n", n,n);
+    //Write the equivalent expression for x%8
 
     return 0;
 }

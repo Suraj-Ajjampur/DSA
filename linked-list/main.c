@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include "main.h"
 
+// Create a linked list and find the middle element 
 
 /**
  * @brief Creates a linked list 
@@ -9,7 +10,7 @@
  * 
  * @param n - number of elements
  */
-void create(int A[], int n){
+void create(int *A, int n){
     struct Node *t,*last; //one node to add elements, other to traverse
     
     if (A == NULL)

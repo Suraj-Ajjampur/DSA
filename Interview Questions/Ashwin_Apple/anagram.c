@@ -16,7 +16,7 @@ bool areAnagram(char* str1, char* str2)
  
     // For each character in input strings, increment count
     // in the corresponding count array
-    for (i = 0; i<=26 && str1[i] && str2[i]; i++) {
+    for (i = 0; i<=NO_OF_CHARS && str1[i] && str2[i]; i++) {
         count1[str1[i]]++;
         count2[str2[i]]++;
     }

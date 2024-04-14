@@ -97,9 +97,9 @@ int main(){
 
     n = 3;
 
-    // printf("3 multiplied by 9 is %d\n",(n<<3)+n);
-    // printf("size of data type long int is %ld\n",SIZE_OF(long int));
-    // printf("size of variable n is %ld\n", size_of(n));
+    printf("3 multiplied by 9 is %d\n",(n<<3)+n);
+    printf("size of data type long int is %ld\n",SIZE_OF(long int));
+    printf("size of variable n is %ld\n", size_of(n));
     int m = 30;
 
     //WAP to print 100 times “Hello” without using loop & goto statement.

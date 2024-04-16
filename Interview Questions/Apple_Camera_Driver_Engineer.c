@@ -10,7 +10,6 @@ typedef struct node{
 
 NODE *head;
 
-
 //write a program to find the middle element of the linked list
 int find_middle(NODE* head){
     

@@ -1,5 +1,5 @@
 /**
- *  @brief Given a set of strings, find the longest common prefix.
+ * @brief Given a set of strings, find the longest common prefix.
  * 
  * @ref https://www.geeksforgeeks.org/stdstrncmp-in-c/
  * 

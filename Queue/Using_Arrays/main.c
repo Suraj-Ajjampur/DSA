@@ -18,7 +18,6 @@ void create(struct Queue *q,int size){
     q->Q=(int*)malloc(q->size * sizeof(int));
 }
 
-
 void enqueue(struct Queue *q, int x){
     //Check for full
     if((q->tail+1)%q->size == q->head)

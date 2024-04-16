@@ -25,11 +25,11 @@ void create(int *A, int n){
 
     for(int i = 1; i<n ;i++)
     {   
-        t=(struct Node*)malloc(sizeof(struct Node));
-        t->data=A[i];
-        t->next=NULL;
-        last->next=t; //link to the linked list
-        last=t;       //Update last
+        t=(struct Node*)malloc(sizeof(struct Node)); //dynamically allocate
+        t->data=A[i];   //assign data
+        t->next=NULL;   //next of node is null
+        last->next=t; // link to the linked list
+        last=t;       // Update last
     }
 }
 

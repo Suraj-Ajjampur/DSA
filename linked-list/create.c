@@ -1,8 +1,6 @@
 #include<stdio.h>
 #include<stdlib.h>
 
-
-
 struct Node{
     int val;
     struct Node* next;
@@ -10,9 +8,7 @@ struct Node{
 
 
 //Write 2 functions
-
 //One to create a linked list and return the head
-
 struct Node* create(int size){
     if(size <=0)
         return NULL;
@@ -80,3 +76,4 @@ int main(){
     int length = sizeof(array)/sizeof(array[0]);
     Display_LL(create_LL_From_array(array, length));
 }
+

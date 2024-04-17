@@ -1,6 +1,5 @@
 #include "ll_apps.h"
 
-
 void RemoveDuplicate(struct Node *p){
     struct Node *q;
     if(p == NULL)

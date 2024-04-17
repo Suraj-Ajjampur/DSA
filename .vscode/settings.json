@@ -78,6 +78,7 @@
     "stdio.h": "c",
     "string_view": "c",
     "paranthesis_matching": "c",
-    "stdlib.h": "c"
+    "stdlib.h": "c",
+    "random": "c"
   }
 }

@@ -5,9 +5,9 @@ struct Node
 {
     int data;
     struct Node *next;
-}*top=NULL;
+};
 
-void push(int x)
+void push(struct Node* top,int x)
 {
     struct Node *t;
     t=(struct Node*)malloc(sizeof(struct Node));
@@ -21,8 +21,7 @@ void push(int x)
     }
 }
 
-
-int pop()
+int pop(struct Node* top)
 {
     struct Node *t;
     int x=-1;
@@ -38,7 +37,7 @@ int pop()
     return x;
 }
 
-void Display()
+void Display(struct Node* top)
 {
     struct Node *p;
     p=top;
@@ -50,16 +49,13 @@ void Display()
     printf("\n");
 }
 
-void peek(){
-    
-}
-
 int main()
 {
-    push(10);
-    push(20);
-    push(30);
-    Display();
-    printf("%d ",pop());
+    struct Node *top=NULL;
+    push(top,10);
+    push(top,20);
+    push(top,30);
+    Display(top);
+    printf("%d ",pop(top));
     return 0;
 }

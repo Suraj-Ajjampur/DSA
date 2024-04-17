@@ -27,7 +27,7 @@ void create(int A[],int n){
 }
 
 /**
- * @brief traverses the linked list
+ * @brief Finds the length of a circular linked list
 **/
 int Length(struct Node *p){
     int len = 0;

@@ -150,9 +150,6 @@ int Search(struct Node *p, int key){
     }
     return -1;
 }
-
-
-
 /**
  * @brief Inseting in a sorted Linked List
  * 

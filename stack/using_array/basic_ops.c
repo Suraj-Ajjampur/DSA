@@ -1,87 +1,72 @@
+// C program for array implementation of stack
+#include <limits.h>
 #include <stdio.h>
 #include <stdlib.h>
 
-struct Stack
-{
-    int size;
+// A structure to represent a stack
+struct Stack {
     int top;
-    int *S;
+    unsigned capacity;
+    int* array;
 };
 
-void create(struct Stack *st)
+// function to create a stack of given capacity. It initializes size of
+// stack as 0
+struct Stack* createStack(unsigned capacity)
 {
-    printf("Enter Size");
-    scanf("%d",&st->size);
-    st->top=-1;
-    st->S=(int *)malloc(st->size*sizeof(int));
+    struct Stack* stack = (struct Stack*)malloc(sizeof(struct Stack));
+    stack->capacity = capacity;
+    stack->top = -1;
+    stack->array = (int*)malloc(stack->capacity * sizeof(int));
+    return stack;
 }
 
-void Display(struct Stack st)
+// Stack is full when top is equal to the last index
+int isFull(struct Stack* stack)
 {
-    int i;
-    for(i=st.top;i>=0;i--)
-    printf("%d ",st.S[i]);
-    printf("\n");
+    return stack->top == stack->capacity - 1;
 }
 
-void push(struct Stack *st,int x)
+// Stack is empty when top is equal to -1
+int isEmpty(struct Stack* stack)
 {
-    if(st->top==st->size-1)
-        printf("Stack overflow\n");
-    else
-    {
-        st->top++;
-        st->S[st->top]=x;
-    }
+    return stack->top == -1;
 }
 
-int pop(struct Stack *st)
+// Function to add an item to stack.  It increases top by 1
+void push(struct Stack* stack, int item)
 {
-    int x=-1;
-    if(st->top==-1)
-        printf("Stack Underflow\n");
-    else
-        x=st->S[st->top--];
-    return x;
+    if (isFull(stack))
+        return;
+    stack->array[++stack->top] = item;
+    printf("%d pushed to stack\n", item);
 }
 
-int peek(struct Stack st,int index)
+// Function to remove an item from stack.  It decreases top by 1
+int pop(struct Stack* stack)
 {
-    int x=-1;
-    if(st.top-index+1<0)
-    printf("Invalid Index \n");
-    x=st.S[st.top-index+1];
-    return x;
+    if (isEmpty(stack))
+        return INT_MIN;
+    return stack->array[stack->top--];
 }
 
-int isEmpty(struct Stack st)
+// Function to return the top from stack without removing it
+int peek(struct Stack* stack)
 {
-    if(st.top==-1)
-        return 1;
-    return 0;
+    if (isEmpty(stack))
+        return INT_MIN;
+    return stack->array[stack->top];
 }
 
-int isFull(struct Stack st)
-{
-    return st.top==st.size-1;
-}
-
-int stackTop(struct Stack st)
-{
-    if(!isEmpty(st))
-        return st.S[st.top];
-    return -1;
-}
-
+// Driver program to test above functions
 int main()
 {
-    struct Stack st;
-    create(&st);
-    push(&st,10);
-    push(&st,20);
-    push(&st,30);
-    push(&st,40);
-    printf("%d \n",peek(st,2));
-    Display(st);
+    struct Stack* stack = createStack(2);
+
+    push(stack, 10);
+    push(stack, 20);
+    push(stack, 30);
+
+    printf("%d popped from stack\n", pop(stack));
     return 0;
 }

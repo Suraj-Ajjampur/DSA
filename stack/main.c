@@ -1,89 +1,77 @@
+//Create a stack using arrays
+
 #include <stdio.h>
 #include <stdlib.h>
-struct Stack
-{
-    int size;
+#include <limits.h>
+
+//Struct to represetn the stack
+struct Stack{
     int top;
-    int *S;
+    unsigned capacity;
+    int* array;
 };
 
-void create(struct Stack *st)
-{
-    printf("Enter Size");
-    scanf("%d",&st->size);
-    st->top=-1;
-    st->S=(int *)malloc(st->size*sizeof(int));
+typedef enum{
+    false,
+    true
+}bool;
+
+//Write a function to create a stack of given capacity
+struct Stack *createStack(unsigned capacity){
+    struct Stack* stack = (struct Stack*)malloc(sizeof(struct Stack));
+    stack->capacity = capacity;
+    stack->top = -1; //empty stack
+    stack->array = (int*)malloc(stack->capacity*sizeof(int));
+    return stack;
 }
 
-void Display(struct Stack st)
-{
-    int i;
-    for(i=st.top;i>=0;i--)
-    printf("%d ",st.S[i]);
-    printf("\n");
+//Stack is full when is equal to the last index
+bool isFull(struct Stack* stack){
+    return stack->top == stack->capacity-1;
 }
 
-void push(struct Stack *st,int x)
-{
-    if(st->top==st->size-1)
-        printf("Stack overflow\n");
-    else
-    {
-        st->top++;
-        st->S[st->top]=x;
+//Stack is empty when top is equal to -1
+bool isEmpty(struct Stack* stack){
+    return stack->top == -1;
+}
+
+//Function to add an item to stack. It increases top by 1
+void push(struct Stack *stack, int item){
+    if(isFull(stack))
+        return;
+    stack->array[++stack->top] = item;
+    printf("%d pushed to the stack\n",item);
+}
+
+//Function to remove an tem from stack. It decreases top by 1
+int pop(struct Stack* stack){
+    if(isEmpty(stack))
+        return INT_MIN;
+    return stack->array[stack->top--];
+}
+
+//Function to return the top from stack without removing it
+int peek(struct Stack* stack){
+    if(isEmpty(stack))
+        return INT_MIN;
+    return stack->array[stack->top];
+}
+
+//Driver code to test the functionality of the stack operations
+int main(){
+
+    //Creates a stack of empty values
+    struct Stack *stack = createStack(20);
+
+    //Pushes 21 values onto the stack, should fail on last attempt
+    for(int i=1;i<=21;i++)
+        push(stack,i);
+    printf("Peeked value is %d\n",peek(stack));
+
+    //Pops 21 values from the stack, should return empty for last attempt
+    for(int i = 1; i<=21;i++){
+        printf("Popped value for iteration %d is %d\n", i,pop(stack));
     }
-}
 
-int pop(struct Stack *st)
-{
-    int x=-1;
-    if(st->top==-1)
-        printf("Stack Underflow\n");
-    else
-    {
-        x=st->S[st->top--];
-    }
-    return x;
-}
-
-int peek(struct Stack st,int index)
-{
-    int x=-1;
-    if(st.top-index+1<0)
-        printf("Invalid Index \n");
-    x=st.S[st.top-index+1];
-    return x;
-}
-
-int isEmpty(struct Stack st)
-{
-if(st.top==-1)
-    return 1;
-return 0;
-}
-
-int isFull(struct Stack st)
-{
-    return st.top==st.size-1;
-}
-
-int stackTop(struct Stack st)
-{
-    if(!isEmpty(st))
-        return st.S[st.top];
-    return -1;
-}
-
-int main()
-{
-    struct Stack st;
-    create(&st);
-    push(&st,10);
-    push(&st,20);
-    push(&st,30);
-    push(&st,40);
-    printf("%d \n",peek(st,2));
-    printf("%d \n", pop(&st));;
-    Display(st);
     return 0;
 }

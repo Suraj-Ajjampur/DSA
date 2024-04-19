@@ -40,9 +40,20 @@ int swap_Endians(int value){
     return result;
 }
 
+//Show the memory representation of a number
+void show_mem_rep(char *start, int n){
+
+    for(int i =0; i < n;i++){
+        printf("%.2x ", start[i]);
+    }
+    printf("\n");
+}
+
 // Litte Endian -> 01 00
 // Big Endian -> 00 01
 int main(){
+    int x = 0x12345678;
+    show_mem_rep((char*)&x, sizeof(int));
     check_for_endianness();
     int big_endian = 0x12345678;
     int little_endian = 0x78563412;

@@ -14,10 +14,7 @@ bool isPalindrome(char* str){
     char reverse[len+1];
     int i;
 
-    for(i = 0; str[i] !='\0'; i++){
-        reverse[i] = str[--len];
-    }
-    reverse[i+1] = '\0'; //Add NULL terminator here
+    strcpy(reverse, str);
 
     printf("Reversed string is %s\n",reverse);
 

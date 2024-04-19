@@ -3,7 +3,6 @@
 #include <stdbool.h>
 #include <malloc.h>
 
-
 struct Queue{
     int size;
     int head;

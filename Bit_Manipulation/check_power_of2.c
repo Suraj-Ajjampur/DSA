@@ -28,8 +28,6 @@ bool powerof4(int num){
     // 0 0 0 0 1 0 1 
     // A 
     // 0 0 0 1 0 1 0
-
-    //
     if(!(num & 0xAAAAAAAA))
         return true;
     else    
@@ -51,7 +49,6 @@ bool powerof8(int num){
         return false;
 }
 
-
 //Write a program to print the number in binary
 void Display_bin(int num){
 
@@ -70,7 +67,6 @@ void Display_bin(int num){
 
 int main(void){
     int x = 8;
-
     for(int i =0; i<=10;i++){
         powerof2(i) == true ? printf("%d is a power of 2\n",i) : printf("%d is not Power of 2\n",i); 
     }

@@ -24,7 +24,6 @@ bool check_for_endianness(){
 // Function to swap a value from
 // big Endian to little Endian and
 // vice versa.
- 
 int swap_Endians(int value){
 
     int left_most_val = value & 0xFF000000;

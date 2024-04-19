@@ -1,8 +1,8 @@
 #include<stdio.h>
 #include<stdbool.h>
 
-// 1000 & 0111
-// 
+
+
 bool powerof2(int val){
     return val && !(val & (val-1));
 }

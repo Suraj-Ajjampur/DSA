@@ -83,9 +83,10 @@ void Merge(struct Node *p, struct Node *q){
     //points to first and last node of the 3rd LL
     struct Node *last;
 
-    //Compare te first elements
-    if(p->data < q->data){
-        third = p;
+    //Compare the first elements ans assign node with least element to head of merged ll
+    
+    if(p->data < q->data){ 
+        third = p; 
         last = p;
         p = p->next;
         third->next = NULL;

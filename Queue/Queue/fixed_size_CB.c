@@ -22,8 +22,8 @@ int enqueue(int x){
         printf("FIFO full");
         return -1;
     }
-    array[wptr] = x;
-    wptr = nextPtr(wptr);
+    array[wptr] = x; //assign data
+    wptr = nextPtr(wptr); //increment wptr
     return 0;
 }
 

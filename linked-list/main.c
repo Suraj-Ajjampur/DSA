@@ -116,7 +116,8 @@ void Display(struct Node *p){
 }
 
 /**
- * @brief 
+ * @brief searches the key in the linked list, 
+ * once found it reassigns the node holding the key val to the head of the linked list
 */
 struct Node* SearchTransposition(struct Node *p, int key){
     struct Node *q = NULL;
@@ -247,7 +248,6 @@ int Delete(struct Node *p, int index)
         return x;
     }
 }
-
 
 int main(void){
 

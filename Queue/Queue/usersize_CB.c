@@ -16,7 +16,7 @@ typedef struct Queue{
 void create(CB *queue, int size){
     queue->size = size;
     queue->rptr =0; queue->wptr=0;
-
+    
     queue->Array_Dynamic = (int *)malloc(sizeof(queue->Array_Dynamic) * queue->size);
     if(queue->Array_Dynamic == NULL){
         printf("Failed to dynamically allocate data");
@@ -46,7 +46,7 @@ int dequeue(CB* queue){
 }
 
 int main(void){
-    printf("Hello World\n");
+    printf("User defines Size FIFO\n");
     CB queue;
 
     create(&queue, 10);

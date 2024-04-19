@@ -3,6 +3,7 @@
 // https://www.emblogic.com/blog/12/tricky-c-interview-questions/
 
 #include <stdio.h>
+#include <limits.h>
 /**
  * By using the &x, we get the base address of the variable x and by adding 1 
  * to it we get the base address of next short int type. Hence the resulting address of 
@@ -21,6 +22,7 @@
 #define SIZE_OF(T) (((T *)0)+1)
 
 #define SWAP(a,b) (((a) == (b)) || (((a) ^= (b)), ((b) ^= (a)), ((a) ^= (b))))
+
 
 // A normal function with an int parameter
 // and void return type
@@ -61,11 +63,8 @@ void smallestof3_wocomparison(void){
     int a,b,c;
     printf("Enter 3 numbers\n");
     scanf("%d %d %d", &a,&b,&c);
-
-    //How to check endianness of the computer.
-    check_for_endianness();
     
-    int negative_bitmask = (1 << 15);
+    int negative_bitmask = (1 << (sizeof(int)*CHAR_BIT -1));
     printf("Smallest number is ");
     if((a-b) & negative_bitmask){
         if((a-c) & negative_bitmask)

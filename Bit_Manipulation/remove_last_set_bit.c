@@ -1,7 +1,6 @@
 #include<stdio.h>
 
 // Remove the last set bit of a number
-
 int remove_last_set_bit(int n){
     
     if(n == 0)

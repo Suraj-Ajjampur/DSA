@@ -42,7 +42,6 @@ int swap_Endians(int value){
 
 //Show the memory representation of a number
 void show_mem_rep(char *start, int n){
-
     for(int i =0; i < n;i++){
         printf("%.2x ", start[i]);
     }
